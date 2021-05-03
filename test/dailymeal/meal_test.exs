@@ -6,6 +6,12 @@ defmodule Dailymeal.MealTest do
   alias Ecto.Changeset
 
   describe "changeset/1" do
+    setup do
+      insert(:user)
+
+      :ok
+    end
+
     test "when all params are valid, return a valid changeset" do
       params = build(:meal_params)
 
@@ -23,7 +29,8 @@ defmodule Dailymeal.MealTest do
         errors: [
           descricao: {"can't be blank", [validation: :required]},
           data: {"can't be blank", [validation: :required]},
-          calorias: {"can't be blank", [validation: :required]}
+          calorias: {"can't be blank", [validation: :required]},
+          user_id: {"can't be blank", [validation: :required]}
         ],
         valid?: false
       }

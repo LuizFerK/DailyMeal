@@ -1,33 +1,32 @@
-defmodule Dailymeal.Meals.UpdateTest do
+defmodule Dailymeal.Users.UpdateTest do
   use Dailymeal.DataCase, async: true
   import Dailymeal.Factory
 
-  alias Dailymeal.{Error, Meal}
-  alias Dailymeal.Meals.Update
+  alias Dailymeal.{Error, User}
+  alias Dailymeal.Users.Update
 
   describe "call/1" do
     setup do
       id = "2baadea4-1d22-4d8c-9455-2ea5d692f931"
 
-      insert(:user)
-      insert(:meal, id: id)
+      insert(:user, id: id)
 
       {:ok, id: id}
     end
 
-    test "when all params are valid, updates the meal", %{id: id} do
-      params = build(:meal_params, %{"id" => id, "descricao" => "Updated description"})
+    test "when all params are valid, updates the user", %{id: id} do
+      params = build(:user_params, %{"id" => id, "name" => "John Mike"})
 
       response = Update.call(params)
 
-      assert {:ok, %Meal{}} = response
+      assert {:ok, %User{name: "John Mike"}} = response
     end
 
     test "when an invalid id is given, returns an error" do
       params =
-        build(:meal_params, %{
+        build(:user_params, %{
           "id" => "2baadea4-1d22-4d8c-9455-2ea5d692f932",
-          "descricao" => "Updated description"
+          "cpf" => 123
         })
 
       response = Update.call(params)
@@ -37,9 +36,9 @@ defmodule Dailymeal.Meals.UpdateTest do
 
     test "when invalid params are given, returns an error", %{id: id} do
       params =
-        build(:meal_params, %{
+        build(:user_params, %{
           "id" => id,
-          "calorias" => "invalid_calories"
+          "cpf" => 123
         })
 
       response = Update.call(params)

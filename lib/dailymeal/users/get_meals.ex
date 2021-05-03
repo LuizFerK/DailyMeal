@@ -12,7 +12,7 @@ defmodule Dailymeal.Users.GetMeals do
   end
 
   defp handle_get([]) do
-    {:error, Error.build(:bad_request, "User does not exist or have no meals")}
+    {:error, Error.build(:not_found, "User does not exist or have no meals")}
   end
 
   defp handle_get([%Meal{} | _] = user_meals), do: {:ok, user_meals}

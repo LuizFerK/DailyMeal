@@ -4,6 +4,12 @@ defmodule DailymealWeb.MealsControllerTest do
   import Dailymeal.Factory
 
   describe "create/2" do
+    setup do
+      insert(:user)
+
+      :ok
+    end
+
     test "when all params are valid, creates the meal", %{conn: conn} do
       params = build(:meal_params)
 
@@ -44,12 +50,26 @@ defmodule DailymealWeb.MealsControllerTest do
 
       assert response == expected_response
     end
+
+    test "when the user_id format is invalid, returns an error", %{conn: conn} do
+      params = build(:meal_params, %{"user_id" => "invalid_user_id"})
+
+      response =
+        conn
+        |> post(Routes.meals_path(conn, :create, params))
+        |> json_response(:bad_request)
+
+      expected_response = %{"message" => "Invalid id format"}
+
+      assert response == expected_response
+    end
   end
 
   describe "delete/2" do
     setup do
       id = "2baadea4-1d22-4d8c-9455-2ea5d692f931"
 
+      insert(:user)
       insert(:meal, id: id)
 
       {:ok, id: id}
@@ -87,6 +107,7 @@ defmodule DailymealWeb.MealsControllerTest do
     setup do
       id = "2baadea4-1d22-4d8c-9455-2ea5d692f931"
 
+      insert(:user)
       insert(:meal, id: id)
 
       {:ok, id: id}
@@ -128,6 +149,7 @@ defmodule DailymealWeb.MealsControllerTest do
     setup do
       id = "2baadea4-1d22-4d8c-9455-2ea5d692f931"
 
+      insert(:user)
       insert(:meal, id: id)
 
       {:ok, id: id}
