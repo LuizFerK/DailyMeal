@@ -12,6 +12,7 @@ defmodule DailymealWeb.Router do
     pipe_through :api
 
     resources "/users/", UsersController, except: [:new, :edit]
+    get "users/meals/:id", UsersController, :get_user_meals
     resources "/meals/", MealsController, except: [:new, :edit]
   end
 

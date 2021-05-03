@@ -37,4 +37,12 @@ defmodule DailymealWeb.UsersController do
       |> render("user.json", user: user)
     end
   end
+
+  def get_user_meals(conn, %{"id" => id}) do
+    with {:ok, user_meals} <- Dailymeal.get_user_meals(id) do
+      conn
+      |> put_status(:ok)
+      |> render("user_meals.json", user_meals: user_meals)
+    end
+  end
 end
