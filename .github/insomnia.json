@@ -1,0 +1,323 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-05-21T19:27:23.132Z",
+  "__export_source": "insomnia.desktop.app:v2021.3.0",
+  "resources": [
+    {
+      "_id": "req_94093a6505064d6f9c70795e0c78366e",
+      "parentId": "fld_e9e896a77a854141a4586df5074f16aa",
+      "modified": 1620009083023,
+      "created": 1619998452061,
+      "url": "{{ _.baseUrl }}/users",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Luiz Fernando\",\n\t\"cpf\": \"12345678902\",\n\t\"email\": \"luizfernandoklei2@live.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_7df219b1358247b791068a59b95784ce"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1619998452061,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e9e896a77a854141a4586df5074f16aa",
+      "parentId": "wrk_1af0ad5ef3134d0b8f6b94f5dd037ae6",
+      "modified": 1619998448686,
+      "created": 1619998448686,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1619998448686,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_1af0ad5ef3134d0b8f6b94f5dd037ae6",
+      "parentId": null,
+      "modified": 1619572268142,
+      "created": 1619572261794,
+      "name": "Dailymeal",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_b79b52df5f4f4480880382702885b5a2",
+      "parentId": "fld_e9e896a77a854141a4586df5074f16aa",
+      "modified": 1620001385311,
+      "created": 1620000273702,
+      "url": "{{ _.baseUrl }}/users/2fc36a73-a9d3-4bae-94b1-39b2dae2b179",
+      "name": "Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1619998452011,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f926c24a00444cf981298301bfd162be",
+      "parentId": "fld_e9e896a77a854141a4586df5074f16aa",
+      "modified": 1620002419463,
+      "created": 1620000287799,
+      "url": "{{ _.baseUrl }}/users/46728e9a-ae22-4305-8715-9c8d68a26661",
+      "name": "Show",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1619998451961,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ba9c714080004682aef2d9866901dc2f",
+      "parentId": "fld_e9e896a77a854141a4586df5074f16aa",
+      "modified": 1620001411555,
+      "created": 1620000298532,
+      "url": "{{ _.baseUrl }}/users/b716143b-2053-46ac-af9e-cf137ea93422",
+      "name": "Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Luiz Fernando\",\n\t\"email\": \"luizfernandoklei1@live.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dae371787d984eabbb6f444e3c857f99"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1619998451911,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6d267a00345e4b219daa8645a3f8804f",
+      "parentId": "fld_e9e896a77a854141a4586df5074f16aa",
+      "modified": 1620009110825,
+      "created": 1620004806504,
+      "url": "{{ _.baseUrl }}/users/meals/7d994a36-845a-4181-a313-d60ad66d4d72",
+      "name": "Get Meals",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1619998451861,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c9d1511991ad41bfbcf438aa24ebdfd8",
+      "parentId": "fld_69aa4582ba864f6e9153b1511ec87679",
+      "modified": 1620012976976,
+      "created": 1619572279411,
+      "url": "{{ _.baseUrl }}/meals",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_id\": \"7d994a36-845a-4181-a313-d60ad66d4d72\",\n\t\"descricao\": \"Description\",\n\t\"data\": \"{% now 'custom', '' %}\",\n\t\"calorias\": 1500\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c92b626ffbb649c4bd58a53932209f13"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1619572445104,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_69aa4582ba864f6e9153b1511ec87679",
+      "parentId": "wrk_1af0ad5ef3134d0b8f6b94f5dd037ae6",
+      "modified": 1619998325488,
+      "created": 1619998325488,
+      "name": "Meals",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1619998325488,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_02c228cb6caf4e2f8d684855f0c4e0e0",
+      "parentId": "fld_69aa4582ba864f6e9153b1511ec87679",
+      "modified": 1620009038524,
+      "created": 1619572445054,
+      "url": "{{ _.baseUrl }}/meals/d0aebad8-5ec5-4fca-b00e-10805a6e11c6",
+      "name": "Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1619572445054,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9179ee4b35464a05b7e07711b37e563c",
+      "parentId": "fld_69aa4582ba864f6e9153b1511ec87679",
+      "modified": 1620004738461,
+      "created": 1619572532771,
+      "url": "{{ _.baseUrl }}/meals/be56cbe8-0878-410b-bb69-d0649948f6c6",
+      "name": "Show",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1619572445004,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c04f10a3765248bcb4437626f1919520",
+      "parentId": "fld_69aa4582ba864f6e9153b1511ec87679",
+      "modified": 1620004751630,
+      "created": 1619572560594,
+      "url": "{{ _.baseUrl }}/meals/be56cbe8-0878-410b-bb69-d0649948f6c6",
+      "name": "Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"descricao\": \"New description\",\n\t\"data\": \"{% now 'iso-8601', '' %}\",\n\t\"calorias\": 2000\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dae371787d984eabbb6f444e3c857f99"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1619572444954,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_6ad7e90ffba0ca518b49f2432722c8f15eedb065",
+      "parentId": "wrk_1af0ad5ef3134d0b8f6b94f5dd037ae6",
+      "modified": 1619998555098,
+      "created": 1619572262268,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:4000/api"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1619572262268,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_6ad7e90ffba0ca518b49f2432722c8f15eedb065",
+      "parentId": "wrk_1af0ad5ef3134d0b8f6b94f5dd037ae6",
+      "modified": 1619572262274,
+      "created": 1619572262274,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_3d37fdae75bb46eaac8c0e91bf7e22d6",
+      "parentId": "wrk_1af0ad5ef3134d0b8f6b94f5dd037ae6",
+      "modified": 1619572261814,
+      "created": 1619572261814,
+      "fileName": "DailyMeal",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
